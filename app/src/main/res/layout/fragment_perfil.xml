@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/fragmentPerfilLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollViewPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/constraintOnePerfil"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_livros_usuario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="2dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayoutPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/branco"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|exitUntilCollapsed"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            android:fitsSystemWindows="true">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintTwoPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|exitUntilCollapsed"
+                >
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/constraintThreePerfil"
+                    android:layout_width="0dp"
+                    android:layout_height="240dp"
+                    android:background="@color/appColorLais"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintFivePerfil"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nome"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/quaseBranco"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/imgProfile"
+                        android:layout_marginTop="15dp" />
+
+                    <ImageView
+                        android:layout_marginTop="50dp"
+                        android:id="@+id/imgProfile"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/ic_plus_sign"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/btnSolicitar"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:text="seguir"
+                    android:inputType="text"
+                    android:elevation="5dp"
+                    android:background="@drawable/btn_perfil"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintThreePerfil"
+                    app:layout_constraintBottom_toTopOf="@+id/constraintFivePerfil"
+                    android:layout_marginBottom="20dp"/>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/constraintFivePerfil"
+                    android:layout_height="0dp"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintThreePerfil"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0">
+
+                    <ImageView
+                        android:id="@+id/imgQtdDoados"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/book_out"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/txtLivrosDoados"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtLivrosDoados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/preto"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/imgQtdDoados"
+                        app:layout_constraintRight_toLeftOf="@+id/imgQtdRecebidos"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgQtdRecebidos"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/book_in"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/txtLivrosDoados"
+                        app:layout_constraintRight_toLeftOf="@+id/txtLivrosRecebidos"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtLivrosRecebidos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/preto"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/imgQtdRecebidos"
+                        app:layout_constraintRight_toLeftOf="@+id/imgQtdLivrosEstante"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgQtdLivrosEstante"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/books"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/imgQtdRecebidos"
+                        app:layout_constraintRight_toLeftOf="@+id/imgQtdTrocados"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtLivrosEstante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/preto"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/imgQtdLivrosEstante"
+                        app:layout_constraintRight_toLeftOf="@+id/imgQtdTrocados"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgQtdTrocados"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/book_exchange"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/txtLivrosEstante"
+                        app:layout_constraintRight_toLeftOf="@+id/txtLivrosTrocados"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtLivrosTrocados"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/preto"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/imgQtdTrocados"
+                        app:layout_constraintRight_toRightOf="parent"
+                        />
+
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.constraint.ConstraintLayout>
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarHome"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                android:fitsSystemWindows="true"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/constraintToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/iconConfiguracoes"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/ic_configuracao"
+                        />
+
+
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonAdicionarLivro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_adicionar_livro"
+        app:elevation="10dp"
+        app:fabSize="normal"
+        android:layout_margin="16dp"
+        app:layout_anchor="@id/nestedScrollViewPerfil"
+        app:layout_anchorGravity="bottom|right|end" />
+
+</android.support.design.widget.CoordinatorLayout>

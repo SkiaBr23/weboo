@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "540404700741",
+    "firebase_url": "https://bookz-2323.firebaseio.com",
+    "project_id": "bookz-2323",
+    "storage_bucket": "bookz-2323.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540404700741:android:ce83c797aa7434ca",
+        "android_client_info": {
+          "package_name": "unb.com.br.booksblank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540404700741-s0rbs6asa6pfnfj5b02nm29tt0cu0dqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "unb.com.br.booksblank",
+            "certificate_hash": "fec0795d6068d8c0e22d1f77063e4d0be3ff9cb3"
+          }
+        },
+        {
+          "client_id": "540404700741-s040fb0jvkfgvsr3urbm89s6lkek1jmi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXREK7A5hUyPmUW58TXNX6x7XdwLDirts"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540404700741-s040fb0jvkfgvsr3urbm89s6lkek1jmi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

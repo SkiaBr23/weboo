@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="unb.com.br.booksblank.activities.LoginActivity">
+
+    <ImageView
+        android:id="@+id/splashImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/book_splash2"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/logoApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="60sp"
+        android:fontFamily="casual"
+        android:textColor="@color/branco"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/box_login_usuario"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal">
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="500dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true" />
+
+
+                <Button
+                android:id="@+id/sign_out_button"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/sign_out"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signed_out"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/sign_out_button"
+                    tools:layout_editor_absoluteY="224dp"
+                    tools:layout_editor_absoluteX="137dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/boxDadosLogin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/box_login_usuario"
+        app:layout_constraintTop_toBottomOf="@id/logoApp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <EditText
+            android:id="@+id/editTxtEmail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bk_login"
+            android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:hint="@string/hintEmail"
+            android:textColorHint="@color/branco"/>
+
+        <EditText
+            android:id="@+id/editTxtSenha"
+            app:layout_constraintTop_toBottomOf="@id/editTxtEmail"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bk_login"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:hint="@string/hintSenha"
+            android:textColorHint="@color/branco"/>
+
+        <Button
+            android:id="@+id/btnEntrar"
+            android:layout_width="270dp"
+            android:layout_height="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTxtSenha"
+            android:layout_marginTop="20dp"
+            android:text="@string/txtBtnEntrar"
+            android:textColor="@color/branco"
+            android:background="@drawable/btn_login"
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/box_login_usuario"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+

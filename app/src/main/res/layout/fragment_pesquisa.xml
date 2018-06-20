@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="unb.com.br.booksblank.activities.fragments.PesquisaFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/branco"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        android:id="@+id/customActionBar">
+
+
+        <ImageButton
+            android:id="@+id/btnLimparPesquisa"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/editTxtPesquisa"
+            android:background="@drawable/ic_clear"
+            />
+
+        <EditText
+            android:id="@+id/editTxtPesquisa"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/preto"
+            android:textColorHint="@color/hintGray"
+            android:hint="@string/hintPesquisa"
+            android:textSize="20sp"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:maxLength="100"
+            android:background="@android:color/transparent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btnLimparPesquisa"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/gridRegiao"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customActionBar">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout_pesquisa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:elevation="6dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pagerFragments"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_layout_pesquisa"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/appColorLais"
+        app:layout_constraintTop_toBottomOf="@+id/customActionBar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

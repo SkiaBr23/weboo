@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Weboo</string>
+    <string name="app_name_nocaps">weebo</string>
+    <string name="msgLoginRedeSocialFB">Login com Facebook</string>
+    <string name="msgLoginRedeSocialGP">Login com Google</string>
+    <string name="msgPerguntaCadastrar">Não tem uma conta?</string>
+    <string name="msgCadastrar">Cadastre-se.</string>
+    <string name="hintEmail">E-mail</string>
+    <string name="hintSenha">Senha</string>
+    <string name="hintPesquisa">Pesquisar&#8230;</string>
+    <string name="txtBtnEntrar">Entrar</string>
+    <string name="loading">Carregando</string>
+
+    <string name="fab_view_behavior" translatable="false">unb.com.br.booksblank.util.ScrollAwareFABBehavior</string>
+    <!-- Sections -->
+    <string name="header_home">início</string>
+    <string name="header_perfil">perfil</string>
+    <string name="header_wishlist">lista de desejos</string>
+    <string name="header_chat">conversas</string>
+    <string name="header_transacoes">transações</string>
+
+    <string name="btnSalvarTelefone">Salvar</string>
+
+    <!-- Login -->
+
+    <string name="signed_in_fmt">Conectado como: %s</string>
+    <string name="signed_in">Conectado</string>
+    <string name="sign_out">Sair</string>
+    <string name="signing_in">Entrando…</string>
+    <string name="signed_out">Desconectado</string>
+    <string name="web_client_id">540404700741-s040fb0jvkfgvsr3urbm89s6lkek1jmi.apps.googleusercontent.com</string>
+    <string name="facebook_app_id">204941563350732</string>
+    <string name="fb_login_protocol_scheme">fb204941563350732</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#09C7BF</color>
+    <color name="branco">#ffffff</color>
+    <color name="darkWhite">#E0E0E0</color>
+    <color name="quaseBranco">#F6F6F6</color>
+    <color name="appName">#ffffff</color>
+    <color name="preto">#ff000000</color>
+    <color name="iconStroke">#7a7a7a</color>
+
+    <!-- Ideias de cores p aplicativo -->
+    <color name="appColorLais">#7460A8</color>
+    <color name="appColorLaisFocus">#9D8BC6</color>
+    <color name="appColorDark">#573E8E</color>
+    <color name="cinzaManeiro">#495867</color>
+    <color name="vermelho">#FF0000</color>
+
+
+    <color name="fbColor">#3B5999</color>
+    <color name="gplusColor">#DC4B38</color>
+    <color name="btnLoginPressed">#acacac</color>
+    <color name="bkFooter">#d7d7d7</color>
+    <color name="hintGray">#acacac</color>
+
+    <color name="btnSeguir">#58DCBE</color>
+
+    <color name="livroDisponivel">#00c203</color>
+    <color name="livroIndisponivel">#c70000</color>
+
+</resources>

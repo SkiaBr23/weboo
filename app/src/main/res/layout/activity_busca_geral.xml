@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="unb.com.br.booksblank.activities.BuscaGeral">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/branco"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        android:id="@+id/customActionBar">
+
+
+        <ImageButton
+            android:id="@+id/btnLimparPesquisar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/editTxtPesquisa"
+            android:background="@drawable/ic_clear"
+            />
+
+        <EditText
+            android:id="@+id/editTxtPesquisa"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/preto"
+            android:textColorHint="@color/hintGray"
+            android:hint="@string/hintPesquisa"
+            android:textSize="20sp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:background="@android:color/transparent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btnLimparPesquisar"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/appColorLais"
+        app:layout_constraintTop_toBottomOf="@+id/customActionBar"/>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customActionBar"
+        app:layout_constraintBottom_toTopOf="@+id/customFooterBar">
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/appColorLais"
+        app:layout_constraintBottom_toTopOf="@id/customFooterBar"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/branco"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        android:id="@+id/customFooterBar">
+
+        <ImageButton
+            android:id="@+id/iconFooterHome"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/iconFooterFavoritos"
+            android:background="@drawable/ic_footer_home_selecionado_antigo"
+            />
+
+        <ImageButton
+            android:id="@+id/iconFooterFavoritos"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iconFooterHome"
+            app:layout_constraintRight_toLeftOf="@+id/iconFooterTroca"
+            android:background="@drawable/ic_footer_favoritos_nselecionado"
+            />
+
+        <ImageButton
+            android:id="@+id/iconFooterTroca"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iconFooterFavoritos"
+            app:layout_constraintRight_toLeftOf="@+id/iconFooterChat"
+            android:background="@drawable/ic_footer_pesquisa_nselecionado"
+            />
+
+        <ImageButton
+            android:id="@+id/iconFooterChat"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iconFooterTroca"
+            app:layout_constraintRight_toLeftOf="@+id/iconFooterPerfil"
+            android:background="@drawable/ic_footer_chat_nselecionado_antigo"
+            />
+
+        <ImageButton
+            android:id="@+id/iconFooterPerfil"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iconFooterChat"
+            app:layout_constraintRight_toRightOf="parent"
+            android:background="@drawable/ic_footer_perfil_nselecionado"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
